@@ -1,0 +1,320 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aplic. Web de jQuery Mobile</title>
+<link href="jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<script>
+var nom;
+var nombre;
+var ancho;
+function nombre(){
+nombre=document.getElementById("txtnombre").value;
+ancho=nombre.length;
+nom=nombre.toUpperCase();
+document.getElementById("txtnombre").value=nom;
+
+for (x=0;x<=ancho-1;x++){
+	if(nombre.charAt(x)>='a' && nombre.charAt(x)<='z'|| nombre.charAt(x)==" ")
+	{
+	}
+	else 
+	{
+	alert("Son caracteres  no validos");
+	nombre=document.getElementById("txtnombre").value="";
+	break;
+	}
+	}}
+	var email
+var ancho1;
+var num; 
+var n; 
+var u;
+var m;
+var v;
+function email(){
+email=document.getElementById("txtemail").value;
+ancho1=email.length;
+for(num=0; num<=ancho1-1; num++)
+ {
+	if(((email.charAt(0)>='0')&&(email.charAt(0)<='9'))||(email.charAt(0)=='@'))
+	{
+			alert("El primer caracter es no valido");
+		break;}
+else{
+					m=email.indexOf('.');
+					v=email.lastIndexOf('.');
+	          if(m!=v)
+			  {
+				  alert("Favor introducir solo un punto");
+				  break;
+			  }
+			  else{
+				  if((m==-1)&&(v==-1)){
+					  alert("Favor de introducir el punto");
+					  break;
+					  }
+	else 
+	{
+		n=email.indexOf('@');
+		u=email.lastIndexOf('@');
+		if(n!=u){
+			alert("Favor solo introducir un @");
+			break;
+		}
+		else{
+			if((n==-1)&&(u==-1))
+			{
+			alert("Favor de introducir @");	
+			break;
+			}
+				
+			  }
+					}
+			}
+	}		
+ }
+}
+
+
+			
+
+		function telefono(){
+		var numero, ancho2, n1;
+	numero=document.getElementById("txttel").value;
+	ancho2=numero.length;
+	for(x=0; x<=ancho2-1; x++){
+		n1=numero.charAt(x);
+	if(((n1>=0) && (n1<=9 ))|| (n1=='-'))
+	{
+		}
+		else{
+			alert("Favor de introducir solo numeros");
+				break;
+			}
+		}
+		}
+		
+		var asunto;
+		var mayu;
+		function asunto(){
+			asunto=document.getElementById("txtasunt").value;
+			mayu=asunto.toUpperCase();
+			document.getElementById("txtasunt").value=mayu;
+			
+			}
+var seguridad;
+  var segu;
+	function seguridad(){
+    seguridad=document.getElementById("txtseguridad").value;
+		segu=document.getElementById("txtsegur").value;
+    if(seguridad==segu)
+	{
+		}
+    else{
+      alert("Favor de introducir bien el valor de seguridad");
+	document.getElementById("txtsegur").value="";
+    }
+	}
+	
+	var nom, email1, tel, asun, seg;
+var n, m, t, a, s, segr;			
+function enviar(){
+	nom=document.getElementById("txtnombre").value;
+	email1=document.getElementById("txtemail").value;
+  tel=document.getElementById("txttel").value;
+  asun=document.getElementById("txtasunt").value;
+  seg=document.getElementById("txtseguridad").value;
+    segr=document.getElementById("txtsegur").value;
+    n=nom.length;
+    m=email1.length;
+    t=tel.length;
+    a=asun.length;
+    s=seg.length;
+if((n==0) || (m==0) || (t==0) || (a==0) || (s==0))
+  {
+    alert("Favor de introducir los datos correctamente");
+  }
+  else{
+    alert("Su mensaje asido enviado");
+    document.getElementById("txtnombre").value="";
+    document.getElementById("txtemail").value="";
+    document.getElementById("txttel").value="";
+    document.getElementById("txtasunt").value="";
+    document.getElementById("txtsegur").value="";
+  }
+}
+
+
+	
+			
+
+</script>
+
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>MAKE UP</h1>
+	</div>
+	<div data-role="content">
+   	
+		<ul data-role="listview">
+       
+			<li><a href="#page2">Inicio</a></li>
+            <li><a href="#page3">Servicios o Productos</a></li>
+			<li><a href="#page4">Equipo</a></li>
+            <li><a href="#page5">Contáctanos</a></li>
+		</ul>	
+ <br>
+        	<center><img src="img/cosmeticos.jpg" width="50%" height="30%" alt="img"></center>
+	</div>
+	<div data-role="footer">
+		<h4>Barby</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header">
+		<h1>¿Quienes Somos?</h1>
+	</div>
+	<div data-role="content">	
+    <h1><center>*Make up Barby*</center></h1>
+   <h1>Misión</h1>
+• Líder Global en Belleza<br>
+• Ser la mejor elección de las mujeres
+   para comprar.<br>
+• El mejor lugar para trabajar.<br>
+• La Fundación más grande 
+   para la mujer.<br>
+• La Empresa más admirada
+     <h1>Visión</h1>
+    Ser la Empresa que mejor entienda y satisfaga las necesidades de productos, servicio y autoestima de las 
+ mujeres de todo el mundo.
+ <h1>Valores</h1>
+• Confianza<br>
+• Respeto<br>
+• Credibilidad<br>
+• Humildad<br>
+• Integridad<br>
+	
+<center><img src="img/maquillaje.jpg" width="70%" height="30%" alt="img"></center>		
+	</div>
+	<div data-role="footer">
+		<h4>Barby</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page3">
+	<div data-role="header">
+		<h1><center>Servicios o Productos</center></h1>
+	</div>
+	<div data-role="content">	
+<center><img src="img/anew.jpg" width="40%" height="30%" alt="img"></center>	<br>
+<center>Si tu piel es seca y/o madura con tendencia a arrugas opta<br> por una base de maquillaje con un tratamiento incluido.</center>
+<br>  
+<center><img src="img/rimel.jpg" width="40%" height="30%" alt="img"></center>	<br>
+<center>El perfecto accesorio para hacer que tus pestañas se vean<br> y luzcan más largas.</center>
+<br>
+<center><img src="img/brillo.jpg" width="40%" height="30%" alt="img" >	</center>
+<center>Un toque muy lindo para tus labios.</center><br>
+<br>
+<center><img src="img/delineador.jpg" width="40%" height="30%" alt="img" >	</center><center>Crecimiento y volumen a tus pestañas.</center><br>
+<center><img src="img/lapiz.jpg" width="40%" height="30%" alt="img" ><br>
+Elige el mejor tono para tus labios.
+<center><img src="img/rubor.jpg" width="40%" height="30%" alt="img" ><br>
+Te da un tono más coqueto.
+<center><img src="img/sombras.jpg" width="40%" height="30%" alt="img" ><br>
+Diferentes colores para diferentes ocasiones.
+</div>
+	<div data-role="footer">
+		<h4>Barby</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page4">
+	<div data-role="header">
+		<h1>Equipo</h1>
+	</div>
+	<div data-role="content">	
+		<img src="img/indii.jpg" width="200px" height="200px" alt="img" >		
+ <br>
+    Indira Rojano Huesca<br>
+   Estudiando: Técnico programador.<br>
+    Edad: 17 años<br>
+    Pasatiempos: hacer deporte, hacer manualidades, salir con sus amigos, ver la televisión, escuchar música.<br>
+    Especialidad: Lic.De la Moda industria textil.<br>
+     Empresa:*Indmar*
+     <br>
+    <img src="img/barby.jpg" width="200px" height="200px" alt="img" >		
+ <br>
+    Barbara Andrade Trujillo.<br>
+    Estudiando: Técnico programador.<br>
+    Edad: 16 años.<br>
+    Pasatiempos: jugar futbol soccer, escuchar música, estar con su familia, convivir con sus amigos, ver televisión. <br>
+    Especialidad: Lic. Cultora de Belleza.<br>
+    Empresa: *Make up Barby*
+
+	</div>
+	<div data-role="footer">
+		<h4>Barby</h4>
+	</div>
+</div>
+
+
+
+<div data-role="page" id="page5">
+	<div data-role="header">
+		<h1>Contáctanos</h1>
+	</div>
+	<div data-role="content">	
+    <center>
+   Calle 10 de abril #1 izucar de matamoros, puebla, pué. <br>
+    barby_andtru@hotmail.com<br>
+    Tel: (044)243-110-95-25 ó (243)43-8-84-92. <br>
+
+    </center>
+    
+			   <table width="0" border="0">
+  <tr>
+    <td>Nombre:</td>
+    <td><input type="text" name="txtnombre" id="txtnombre" value="" onBlur="nombre()"/>
+    </td>
+  </tr>
+  <tr>
+    <td>E-mail</td>
+    <td><input type="text" name="txtemail" id="txtemail" value="" onBlur="email()"  />
+    </td>
+  </tr>
+  <tr>
+    <td>Teléfono</td>
+    <td><input type="text" name="txttel" id="txttel" value="" onBlur="telefono()"  />
+    </td>
+  </tr>
+  <tr>
+    <td>Asunto</td>
+    <td><input type="text" name="txtasunt" id="txtasunt" value="" onBlur="asunto()"  />
+    </td>
+  </tr>
+  <tr>
+    <td><input type="text" name="txtseguridad" id="txtseguridad" disabled="disabled" value="*Barby*"  />
+    </td>
+    <td><input type="text" name="txtsegur" id="txtsegur" value="" onBlur="seguridad()"  />
+    </td>
+  </tr>
+   </tr>
+  <tr>
+    <td colspan="2"><button onClick="enviar()">Enviar</button></td>
+   
+  </tr>
+</table>
+	</div>
+	<div data-role="footer">
+		<h4>Barby</h4>
+	</div>
+</div>
+</body>
+</html>
